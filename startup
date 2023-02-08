@@ -1,1 +1,32 @@
-gay
+--[[
+  ______   ____    ____  _______ .______       __  ___  __   __       __      
+ /  __  \  \   \  /   / |   ____||   _  \     |  |/  / /_ | |  |     |  |     
+|  |  |  |  \   \/   /  |  |__   |  |_)  |    |  '  /   | | |  |     |  |     
+|  |  |  |   \      /   |   __|  |      /     |    <    | | |  |     |  |     
+|  `--'  |    \    /    |  |____ |  |\  \----.|  .  \   | | |  `----.|  `----.
+ \______/      \__/     |_______|| _| `._____||__|\__\  |_| |_______||_______|
+ 
+Lynth Hub 1.0  -- Work in progress, respectfully fuck off
+]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/typical-overk1ll/scripts/main/Invite",true))()
+
+local games = {815405518}
+local currentGame = nil;
+
+for i = 1,#games do
+   if games[i] == game.PlaceId  then
+            currentGame = games[i]
+            break
+   end
+end
+
+if currentGame then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/typical-overk1ll/lynthhub/main/" .. tostring(currentGame),true))()
+    else
+        game.StarterGui:SetCore("SendNotification",  {
+            Title = "LYNTH",
+            Text = "This game is not supported";
+        })
+end
+
